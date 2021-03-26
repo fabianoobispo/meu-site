@@ -20,6 +20,7 @@ export function NewTransactionModal({ isOpen, onRequestClose}: NewTransactionMod
 
     function handleCreateNewTransaction(event: FormEvent){
         event.preventDefault();
+        
         const data = {
             title,
             value,
@@ -28,7 +29,7 @@ export function NewTransactionModal({ isOpen, onRequestClose}: NewTransactionMod
         }
      
 
-        api.post('/transaction', data)
+        api.post('/transactions::', data)
 
     }
 
